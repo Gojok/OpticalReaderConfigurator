@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connection.Designer.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransportLayerUart.cs" />
+    <EmbeddedResource Include="Connection.resx">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +110,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="MaterialesIconos\1566453901343.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MaterialesIconos\1566453901343.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MaterialesIconos\icon cerrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MaterialesIconos\icon minimizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

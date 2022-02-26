@@ -1,7 +1,7 @@
 ﻿
 namespace OpticalReaderConfigurator
 {
-    partial class NetworkSettings
+    partial class Connection
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@ namespace OpticalReaderConfigurator
         {
             this.SuspendLayout();
             // 
-            // NetworkSettings
+            // Connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1246, 787);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NetworkSettings";
-            this.Text = "NetworkSettings";
+            this.Name = "Connection";
+            this.Text = "Connection";
             this.ResumeLayout(false);
 
         }
