@@ -19,6 +19,10 @@ namespace OpticalReaderConfigurator
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        private PhotoSettings photoForm = new PhotoSettings();
+        private NetworkSettings networkSettingsForm = new NetworkSettings();
+        private Connection connectionForm = new Connection();
+
         public MainForm()
         {
             InitializeComponent();
@@ -38,6 +42,33 @@ namespace OpticalReaderConfigurator
         private void pictureBoxHide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void AbrirFormInPanel(object Formhijo)
+        {
+            if (this.panelContent.Controls.Count > 0)
+                this.panelContent.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContent.Controls.Add(fh);
+            this.panelContent.Tag = fh;
+            fh.Show();
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(connectionForm);
+        }
+
+        private void buttonPhoto_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(photoForm);
+        }
+
+        private void buttonWanSettings_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(networkSettingsForm);
         }
     }
 }

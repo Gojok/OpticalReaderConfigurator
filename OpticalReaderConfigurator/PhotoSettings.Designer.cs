@@ -1,7 +1,7 @@
 ﻿
 namespace OpticalReaderConfigurator
 {
-    partial class Photo
+    partial class PhotoSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@ namespace OpticalReaderConfigurator
         {
             this.SuspendLayout();
             // 
-            // Photo
+            // PhotoSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1246, 787);
+            this.ClientSize = new System.Drawing.Size(1230, 748);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Photo";
-            this.Text = "Photo";
+            this.Name = "PhotoSettings";
+            this.Text = "PhotoSettings";
             this.ResumeLayout(false);
 
         }

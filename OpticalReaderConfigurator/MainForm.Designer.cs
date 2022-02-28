@@ -30,27 +30,27 @@ namespace OpticalReaderConfigurator
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Connection = new System.Windows.Forms.Button();
+            this.buttonPhoto = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.buttonWanSettings = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelUp = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.Connection);
+            this.panel1.Controls.Add(this.buttonPhoto);
+            this.panel1.Controls.Add(this.buttonConnect);
+            this.panel1.Controls.Add(this.buttonWanSettings);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -58,16 +58,59 @@ namespace OpticalReaderConfigurator
             this.panel1.Size = new System.Drawing.Size(206, 823);
             this.panel1.TabIndex = 0;
             // 
-            // Connection
+            // buttonPhoto
             // 
-            this.Connection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Connection.ForeColor = System.Drawing.Color.Transparent;
-            this.Connection.Location = new System.Drawing.Point(0, 172);
-            this.Connection.Name = "Connection";
-            this.Connection.Size = new System.Drawing.Size(206, 52);
-            this.Connection.TabIndex = 1;
-            this.Connection.Text = "button1";
-            this.Connection.UseVisualStyleBackColor = true;
+            this.buttonPhoto.FlatAppearance.BorderSize = 0;
+            this.buttonPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonPhoto.ForeColor = System.Drawing.Color.Black;
+            this.buttonPhoto.Location = new System.Drawing.Point(0, 123);
+            this.buttonPhoto.Name = "buttonPhoto";
+            this.buttonPhoto.Size = new System.Drawing.Size(206, 52);
+            this.buttonPhoto.TabIndex = 3;
+            this.buttonPhoto.Text = "Photo";
+            this.buttonPhoto.UseVisualStyleBackColor = true;
+            this.buttonPhoto.Click += new System.EventHandler(this.buttonPhoto_Click);
+            // 
+            // buttonConnect
+            // 
+            this.buttonConnect.FlatAppearance.BorderSize = 0;
+            this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonConnect.ForeColor = System.Drawing.Color.Black;
+            this.buttonConnect.Location = new System.Drawing.Point(0, 74);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(206, 52);
+            this.buttonConnect.TabIndex = 2;
+            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
+            // buttonWanSettings
+            // 
+            this.buttonWanSettings.FlatAppearance.BorderSize = 0;
+            this.buttonWanSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWanSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonWanSettings.ForeColor = System.Drawing.Color.Black;
+            this.buttonWanSettings.Location = new System.Drawing.Point(0, 172);
+            this.buttonWanSettings.Name = "buttonWanSettings";
+            this.buttonWanSettings.Size = new System.Drawing.Size(206, 52);
+            this.buttonWanSettings.TabIndex = 1;
+            this.buttonWanSettings.Text = "WAN settings";
+            this.buttonWanSettings.UseVisualStyleBackColor = true;
+            this.buttonWanSettings.Click += new System.EventHandler(this.buttonWanSettings_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::OpticalReaderConfigurator.Properties.Resources._15664539013432;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelUp
             // 
@@ -80,36 +123,6 @@ namespace OpticalReaderConfigurator
             this.panelUp.Size = new System.Drawing.Size(1246, 36);
             this.panelUp.TabIndex = 1;
             this.panelUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseDown);
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(206, 36);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1246, 787);
-            this.panel3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(0, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(0, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 52);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // pictureBoxHide
             // 
@@ -133,17 +146,13 @@ namespace OpticalReaderConfigurator
             this.pictureBoxClose.TabStop = false;
             this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
             // 
-            // pictureBox1
+            // panelContent
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::OpticalReaderConfigurator.Properties.Resources._15664539013432;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(206, 36);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1246, 787);
+            this.panelContent.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -151,17 +160,17 @@ namespace OpticalReaderConfigurator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1452, 823);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelUp);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelUp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,11 +179,11 @@ namespace OpticalReaderConfigurator
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelUp;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Connection;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonWanSettings;
+        private System.Windows.Forms.Button buttonPhoto;
+        private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.PictureBox pictureBoxHide;
         private System.Windows.Forms.PictureBox pictureBoxClose;
     }

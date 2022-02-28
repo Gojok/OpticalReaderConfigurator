@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO.Ports
+using System.IO.Ports;
 
 namespace OpticalReaderConfigurator
 {
@@ -15,9 +15,12 @@ namespace OpticalReaderConfigurator
         public event connDisconEvent connectEv;
         public event connDisconEvent disconnectEv;
 
+
+
         public TransportLayerUart()
         {
-
+            _serialPort = new SerialPort();
+           // _serialPort.BaudRate
         }
         
         public bool isConnect()
@@ -35,7 +38,7 @@ namespace OpticalReaderConfigurator
 
         }
 
-        public void setSettings()
+        public void setConfigure()
         {
 
         }

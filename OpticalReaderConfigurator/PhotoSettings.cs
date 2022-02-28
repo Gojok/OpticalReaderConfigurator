@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace OpticalReaderConfigurator
 {
-    public partial class Photo : Form
+    public partial class PhotoSettings : Form
     {
-        
+        public PhotoSettings()
+        {
+            InitializeComponent();
+        }
     }
 }
