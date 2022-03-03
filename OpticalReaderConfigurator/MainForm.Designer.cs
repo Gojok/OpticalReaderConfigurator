@@ -38,6 +38,8 @@ namespace OpticalReaderConfigurator
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.labelConnInfo = new System.Windows.Forms.Label();
+            this.buttonLog = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUp.SuspendLayout();
@@ -48,6 +50,8 @@ namespace OpticalReaderConfigurator
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.buttonLog);
+            this.panel1.Controls.Add(this.labelConnInfo);
             this.panel1.Controls.Add(this.buttonPhoto);
             this.panel1.Controls.Add(this.buttonConnect);
             this.panel1.Controls.Add(this.buttonWanSettings);
@@ -62,8 +66,8 @@ namespace OpticalReaderConfigurator
             // 
             this.buttonPhoto.FlatAppearance.BorderSize = 0;
             this.buttonPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.buttonPhoto.ForeColor = System.Drawing.Color.Black;
+            this.buttonPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.buttonPhoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.buttonPhoto.Location = new System.Drawing.Point(0, 123);
             this.buttonPhoto.Name = "buttonPhoto";
             this.buttonPhoto.Size = new System.Drawing.Size(206, 52);
@@ -76,8 +80,8 @@ namespace OpticalReaderConfigurator
             // 
             this.buttonConnect.FlatAppearance.BorderSize = 0;
             this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.buttonConnect.ForeColor = System.Drawing.Color.Black;
+            this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.buttonConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.buttonConnect.Location = new System.Drawing.Point(0, 74);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(206, 52);
@@ -90,8 +94,8 @@ namespace OpticalReaderConfigurator
             // 
             this.buttonWanSettings.FlatAppearance.BorderSize = 0;
             this.buttonWanSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWanSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.buttonWanSettings.ForeColor = System.Drawing.Color.Black;
+            this.buttonWanSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.buttonWanSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.buttonWanSettings.Location = new System.Drawing.Point(0, 172);
             this.buttonWanSettings.Name = "buttonWanSettings";
             this.buttonWanSettings.Size = new System.Drawing.Size(206, 52);
@@ -126,6 +130,7 @@ namespace OpticalReaderConfigurator
             // 
             // pictureBoxHide
             // 
+            this.pictureBoxHide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxHide.Image = global::OpticalReaderConfigurator.Properties.Resources.icon_minimizar;
             this.pictureBoxHide.Location = new System.Drawing.Point(1185, 4);
             this.pictureBoxHide.Name = "pictureBoxHide";
@@ -137,6 +142,7 @@ namespace OpticalReaderConfigurator
             // 
             // pictureBoxClose
             // 
+            this.pictureBoxClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxClose.Image = global::OpticalReaderConfigurator.Properties.Resources.icon_cerrar2;
             this.pictureBoxClose.Location = new System.Drawing.Point(1217, 4);
             this.pictureBoxClose.Name = "pictureBoxClose";
@@ -153,6 +159,32 @@ namespace OpticalReaderConfigurator
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1246, 787);
             this.panelContent.TabIndex = 2;
+            // 
+            // labelConnInfo
+            // 
+            this.labelConnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelConnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelConnInfo.ForeColor = System.Drawing.Color.Red;
+            this.labelConnInfo.Location = new System.Drawing.Point(0, 778);
+            this.labelConnInfo.Name = "labelConnInfo";
+            this.labelConnInfo.Size = new System.Drawing.Size(206, 45);
+            this.labelConnInfo.TabIndex = 4;
+            this.labelConnInfo.Text = "Disconnect";
+            this.labelConnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonLog
+            // 
+            this.buttonLog.FlatAppearance.BorderSize = 0;
+            this.buttonLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.buttonLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.buttonLog.Location = new System.Drawing.Point(0, 221);
+            this.buttonLog.Name = "buttonLog";
+            this.buttonLog.Size = new System.Drawing.Size(206, 52);
+            this.buttonLog.TabIndex = 5;
+            this.buttonLog.Text = "Log";
+            this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
             // MainForm
             // 
@@ -186,5 +218,7 @@ namespace OpticalReaderConfigurator
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.PictureBox pictureBoxHide;
         private System.Windows.Forms.PictureBox pictureBoxClose;
+        private System.Windows.Forms.Label labelConnInfo;
+        private System.Windows.Forms.Button buttonLog;
     }
 }

@@ -22,10 +22,12 @@ namespace OpticalReaderConfigurator
         private PhotoSettings photoForm = new PhotoSettings();
         private NetworkSettings networkSettingsForm = new NetworkSettings();
         private Connection connectionForm = new Connection();
+        private FormLog formLog = new FormLog();
 
         public MainForm()
         {
             InitializeComponent();
+            AbrirFormInPanel(connectionForm);
         }
 
         private void panelUp_MouseDown(object sender, MouseEventArgs e)
@@ -69,6 +71,11 @@ namespace OpticalReaderConfigurator
         private void buttonWanSettings_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(networkSettingsForm);
+        }
+
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(formLog);
         }
     }
 }

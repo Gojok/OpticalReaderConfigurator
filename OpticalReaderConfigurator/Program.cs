@@ -8,6 +8,8 @@ namespace OpticalReaderConfigurator
 {
     static class Program
     {
+        public static TransportLayerUart transportLayerUart = new TransportLayerUart();
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
