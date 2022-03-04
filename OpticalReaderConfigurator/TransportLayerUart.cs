@@ -16,7 +16,7 @@ namespace OpticalReaderConfigurator
 
         private UInt32 timeLastTransaction = 0;
         private const UInt32 timeoutBreckConnection = 3000;
-        private 
+         
 
         public delegate void transportLayerBaseEvent();
         public event transportLayerBaseEvent connectEvent;

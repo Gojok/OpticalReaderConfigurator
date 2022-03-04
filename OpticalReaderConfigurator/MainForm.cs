@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Globalization;
 
 namespace OpticalReaderConfigurator
 {
@@ -23,6 +24,9 @@ namespace OpticalReaderConfigurator
         private NetworkSettings networkSettingsForm = new NetworkSettings();
         private Connection connectionForm = new Connection();
         private FormLog formLog = new FormLog();
+
+        private long lastClickLabelTime = 0;
+        private int countClickLabel = 0;
 
         public MainForm()
         {
@@ -76,6 +80,19 @@ namespace OpticalReaderConfigurator
         private void buttonLog_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(formLog);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(DateTime.Now.Ticks - lastClickLabelTime > 1500 * TimeSpan.TicksPerMillisecond)
+            {
+                lastClickLabelTime = DateTime.Now.Ticks;
+                countClickLabel = 1;
+            } else if (countClickLabel >= 3) {
+                MessageBox.Show("Путин хуйло", "ALERT!!!", MessageBoxButtons.OK); 
+            } else {
+                countClickLabel++;
+            }
         }
     }
 }

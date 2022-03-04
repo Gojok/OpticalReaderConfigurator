@@ -29,21 +29,38 @@ namespace OpticalReaderConfigurator
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBoxLog = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // textBoxLog
+            // 
+            this.textBoxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.textBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxLog.ForeColor = System.Drawing.SystemColors.Info;
+            this.textBoxLog.Location = new System.Drawing.Point(12, 12);
+            this.textBoxLog.Multiline = true;
+            this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.ReadOnly = true;
+            this.textBoxLog.Size = new System.Drawing.Size(1222, 763);
+            this.textBoxLog.TabIndex = 0;
             // 
             // FormLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1214, 709);
+            this.ClientSize = new System.Drawing.Size(1246, 787);
+            this.Controls.Add(this.textBoxLog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLog";
             this.Text = "FormLog";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBoxLog;
     }
 }
