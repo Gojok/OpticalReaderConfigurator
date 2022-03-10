@@ -32,6 +32,10 @@ namespace OpticalReaderConfigurator
         {
             InitializeComponent();
             AbrirFormInPanel(connectionForm);
+            DisconnectClbk();
+            Program.transportLayerUart.portOpenEvent += OpenPortClbk;
+            Program.transportLayerUart.connectEvent += ConnectClbk;
+            Program.transportLayerUart.disconnectEvent += DisconnectClbk;
         }
 
         private void panelUp_MouseDown(object sender, MouseEventArgs e)
@@ -84,15 +88,34 @@ namespace OpticalReaderConfigurator
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(DateTime.Now.Ticks - lastClickLabelTime > 1500 * TimeSpan.TicksPerMillisecond)
+            if(DateTime.Now.Ticks - lastClickLabelTime > 2000 * TimeSpan.TicksPerMillisecond)
             {
                 lastClickLabelTime = DateTime.Now.Ticks;
                 countClickLabel = 1;
             } else if (countClickLabel >= 3) {
-                MessageBox.Show("Путин хуйло", "ALERT!!!", MessageBoxButtons.OK); 
+                MessageBox.Show("Путин хуйло", "ALERT!!!", MessageBoxButtons.OK);
+                lastClickLabelTime = 0;
             } else {
                 countClickLabel++;
             }
+        }
+
+        private void OpenPortClbk()
+		{
+            labelConnInfo.Text = "Port open";
+            labelConnInfo.ForeColor = Color.BlueViolet;
+        }
+
+        private void ConnectClbk()
+        {
+            labelConnInfo.Text = "Connect";
+            labelConnInfo.ForeColor = Color.Green;
+        }
+
+        private void DisconnectClbk()
+        { 
+            labelConnInfo.Text = "Disconnect";
+            labelConnInfo.ForeColor = Color.Red;
         }
     }
 }
